@@ -1,4 +1,5 @@
 //require connection.js
+var connection = require("../config/connection.js");
 //create the methods that will execute the necessary MySQL commands in the controllers
 //selectAll()
 //insertOne()
