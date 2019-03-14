@@ -6,3 +6,5 @@ var connection = require("../config/connection.js");
 //updateOne()
 
 //export the ORM object in the module.exports
+
+module.exports = orm;

@@ -3,6 +3,7 @@ var express = require("express");
 var PORT = process.env.PORT || 8080;
 
 var app = express();
+var env = require("dotenv").config()
 
 // Serve static content for the app from the "public" directory in the application directory.
 //style.css
