@@ -2,7 +2,6 @@
 var mysql = require("mysql");
 var key = require("../key")
 
-console.log(key)
 
 var connection = mysql.createConnection({
   host: "localhost",

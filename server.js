@@ -1,5 +1,6 @@
 var express = require("express");
-
+var path = require("path")
+var bodyParser = require("body-parser");
 var PORT = process.env.PORT || 8080;
 
 var app = express();
@@ -7,7 +8,7 @@ var env = require("dotenv").config()
 
 // Serve static content for the app from the "public" directory in the application directory.
 //style.css
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/public")))
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));

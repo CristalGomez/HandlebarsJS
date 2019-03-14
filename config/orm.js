@@ -29,10 +29,10 @@ function objToSQL(ob){
 }
 //obj for SQL statement functions
 
-var orm = {
+var burger = {
     //selectAll()
     selectAll: function(tableInput, cb){
-        var queryString = "SELECT * FROM" + tableInput + ";";
+        var queryString = "SELECT * FROM " + tableInput + ";";
 
         connection.query(queryString, function(err, res){
             if (err){
@@ -78,6 +78,6 @@ var orm = {
 }
 
 
-//export the ORM object in the module.exports
+//export the ORM(Burger) object in the module.exports
 
-module.exports = orm;
+module.exports = burger;
