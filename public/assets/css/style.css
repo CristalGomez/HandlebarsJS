@@ -1,10 +1,20 @@
-
-h2 {
-    color: red
+body {
+    background: url(../images/marble.jpg)
 }
-.create-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
+h2 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.col-md-6{
+    background-color: whitesmoke
+}
+.col-md-12{
+    background-color: whitesmoke
+}
+

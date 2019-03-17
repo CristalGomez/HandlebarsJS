@@ -1,46 +1,54 @@
 {{!-- create a button that will submit the user input into the database --}}
-<h1>Eat the Burger</h1>
-
-{{!-- <div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      {{#each burgers}}
-      {{unless this.devoured}}
-      <div>
-        <form action ="/burgers/{{this.id}}?_method=PUT" method="POST">
-        <button type="submit" class="burger">{{this.burger_name}}</button>
-        </form>
-      </div>
-      {{/unless}}
-      {{/each}}
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-
-    </div>
-  </div>
-</div> --}}
-
-
-{{!-- input box & submit button --}}
-
-
+<h1>Make Your Menu</h1>
 
 <div class="container">
   <div class="row">
+    <div class="col-md-6">
+      <h2>Your Menu</h2>
+      <ul>
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <li>
+          <p>{{this.id}}. {{this.burger_name}}</p>
+
+          <form action="/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            <button class="btn-primary btn-dark" type="submit">Delete</button>
+          </form>
+        </li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-6">
+      <h2>Nvm, Not on the Menu</h2>
+      {{#each burgers}}
+      {{#if this.devoured}}
+      <li>
+        {{this.id}}
+        {{this.burger_name}}
+      </li>
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+{{!-- input box & submit button --}}
+<div class="container">
+  <div class="row">
+
     <div class="col-md-12">
-      <h2 class=>Add Your Burger</h2>
-      <form class="create-form">
+      <h2>Add to the Menu!</h2>
+      <form class="create-form" action="/" method="POST">
 
         <div class="form-group">
-          <label for="ca">Burger Name</label>
           <input type="text" id="ca" name="name">
+          <button type="submit">Add</button>
         </div>
-
-        <button type="submit">Add Burger</button>
       </form>
-    </div> 
-  </div> 
-</div> 
+    </div>
+
+  </div>
+</div>
