@@ -1,9 +1,11 @@
 body {
-    background: url(../images/marble.jpg)
+    background: url(../images/marble.jpg);
+    margin: auto
 }
 h2 {
     text-align: center;
     font-family: 'Amatic SC', cursive;
+    border-bottom-style: dotted;
 }
 
 h1 {
@@ -12,9 +14,18 @@ h1 {
 }
 
 .col-md-6{
-    background-color: whitesmoke
+    background-color: whitesmoke;
+    padding: 10px;
 }
 .col-md-12{
-    background-color: whitesmoke
+    background-color: whitesmoke;
+    padding: 10px;
 }
 
+.diy {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
