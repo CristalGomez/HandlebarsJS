@@ -1,4 +1,6 @@
+console.log("hi")
 $(function(){
+    console.log("hi")
     $(".delete-food").on("click", function(evnet){
         event.preventDefault()
         var id = $(this).data("id");
@@ -19,13 +21,13 @@ $(function(){
     })
 })
 
-$(".create-form").on("submit", function(event){
+$(".create-form").on("click", function(event){
     event.preventDefault();
     var newFood = {
         name: $("#ca").val().trim(),
         devoured: $("[name=devoured]:checked").val().trim()
     };
-
+    console.log(newFood)
     $.ajax("/api/burgers", {
         type: "POST",
         data: newFood
